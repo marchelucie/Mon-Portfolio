@@ -1,38 +1,163 @@
-.App {
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+  margin: 0;
+  padding: 0;
+  color: #232942;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff8;
+  backdrop-filter: blur(6px);
+  padding: 20px 40px;
+  border-bottom: 2px solid #e0c3fc;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav-brand {
+  font-weight: bold;
+  font-size: 1.4em;
+  color: #8e44ad;
+}
+.navbar ul {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.navbar a {
+  text-decoration: none;
+  color: #232942;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.navbar a:hover {
+  color: #8e44ad;
+}
+
+main {
+  max-width: 950px;
+  margin: 40px auto;
+  background: #fff9;
+  padding: 36px 28px;
+  border-radius: 22px;
+  box-shadow: 0 8px 32px #9d8eb9aa;
+}
+
+footer {
+  margin: 40px 0 0;
+  text-align: center;
+  color: #666;
+  font-size: 1em;
+  background: #f8fafc44;
+  padding: 15px 0 5px 0;
+}
+
+.accueil {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.avatar-large {
+  width: 130px;
+  border-radius: 50%;
+  margin-bottom: 16px;
+  box-shadow: 0 3px 12px #a387c0aa;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.intro {
+  font-size: 1.15em;
+  margin-bottom: 28px;
+  color: #56418a;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.infos {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-around;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+.experience, .formation {
+  background: #f5eaffcc;
+  border-radius: 10px;
+  padding: 12px 18px;
+  margin: 7px 0;
+  box-shadow: 0 1px 4px #d0b3e866;
+}
+.periode {
+  display: block;
+  font-size: 0.95em;
+  color: #a784b9;
+  margin-bottom: 6px;
+}
+.skills-list {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 18px;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 30px 0;
+}
+.skills-list li {
+  background: #e0c3fcaa;
+  padding: 7px 16px;
+  border-radius: 18px;
+  margin: 4px;
+  font-weight: 500;
+  color: #553c9a;
 }
 
-.App-link {
-  color: #61dafb;
+.projets-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+}
+.projet-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px #e0c3fc99;
+  padding: 22px 18px;
+  width: 340px;
+  margin-bottom: 22px;
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+.projet-preview {
+  width: 100%;
+  border-radius: 9px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 6px #8ec5fc55;
+  max-height: 170px;
+  object-fit: cover;
+}
+.projet-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 4px 22px #8ec5fc99;
+}
+.projet-card a {
+  color: #8e44ad;
+  text-decoration: underline;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.apropos-section {
+  display: flex;
+  gap: 42px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+.apropos-section div {
+  flex: 1 1 180px;
+  background: #f5eaffcc;
+  padding: 16px;
+  border-radius: 12px;
+  min-width: 200px;
+}
+
+@media (max-width: 900px) {
+  main { padding: 18px 5vw; }
+  .infos, .apropos-section { flex-direction: column; gap: 15px;}
+  .projets-list { flex-direction: column; gap: 18px;}
 }

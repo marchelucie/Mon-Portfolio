@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Accueil from "./pages/Accueil";
+import Projets from "./pages/Projets";
+import APropos from "./pages/APropos";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <nav className="navbar">
+        <h1 className="nav-brand">Lucie Marché</h1>
+        <ul>
+          <li><Link to="/">Accueil</Link></li>
+          <li><Link to="/projets">Projets</Link></li>
+          <li><Link to="/a-propos">À propos</Link></li>
+        </ul>
+      </nav>
+      <main>
+        <Routes>
+          <Route path="/" element={<Accueil />} />
+          <Route path="/projets" element={<Projets />} />
+          <Route path="/a-propos" element={<APropos />} />
+        </Routes>
+      </main>
+      <footer>
+        © {new Date().getFullYear()} Lucie Marché — Développeuse web
+      </footer>
+    </Router>
   );
 }
 
