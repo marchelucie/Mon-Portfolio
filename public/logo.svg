@@ -1,0 +1,6 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="#fff" stroke="#8e44ad" stroke-width="2"></rect>
+  <text x="50%" y="57%" text-anchor="middle" font-size="30" font-family="Montserrat, Arial, sans-serif" font-weight="bold" fill="#8e44ad" letter-spacing="3" dominant-baseline="middle">
+    LM
+  </text>
+</svg>
